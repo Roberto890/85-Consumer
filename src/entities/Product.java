@@ -26,15 +26,15 @@ public class Product implements Comparable<Product>{
     }
 
     //statico usa o produto que eu passar
-    //3º forma de fazer - REFERENCE METHOD COM MÉTODO ESTATICO
-    public static boolean staticProductPredicate(Product p){
-        return p.getPrice() >= 100.00;
+    //2º forma de fazer - REFERENCE METHOD COM MÉTODO ESTATICO
+    public static void staticPriceUpdate(Product p){
+        p.setPrice(p.getPrice() * 1.1);
     }
 
     //não estatico usa o proprio produto
-    //4º forma de fazer - REFERENCE METHOD COM MÉTODO NÃO ESTATICO
-    public boolean nonStaticProductPredicate(){
-        return price >= 100.00;
+    //3º forma de fazer - REFERENCE METHOD COM MÉTODO NÃO ESTATICO
+    public void nonStaticPriceUpdate(){
+        price = price * 1.1;
     }
 
     @Override

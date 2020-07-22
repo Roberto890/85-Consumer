@@ -10,7 +10,5 @@ public class PriceUpdate implements Consumer<Product>{
 	public void accept(Product p) {
         // atualizar o valor de p com 10%
         p.setPrice(p.getPrice()*1.1);
-		
 	}
-    
 }
